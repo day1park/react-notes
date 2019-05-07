@@ -98,7 +98,46 @@
 // );
 
 // CLASSES
+class Person {
+  //can have properties or methods in side
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    return `hello, my name is ${this.name} and i am ${this.age} years old`;
+  }
+}
+
+const person1 = new Person("johnny", 44);
+const person2 = new Person("bonnie", 19);
+
+// console.log(person1.greet());
 
 // SUBCLASSES
+class Customer extends Person {
+  constructor(name, age, balance) {
+    super(name, age);
+    this.balance = balance;
+  }
+
+  info() {
+    return `${this.name} owes ${this.balance}.00`;
+  }
+}
+
+const customer1 = new Customer("kevin", 30, 4000);
+
+console.log(customer1.info());
 
 // MODULES
+// file 1 (file1.js)
+export const name = "jeff";
+
+// file 2 (file2.js)
+
+import { name } from "./file1";
+console.log(name);
+
+// export as default import without curly braces
