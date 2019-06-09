@@ -1,6 +1,6 @@
 import { GET_CONTACTS } from "./types";
 
-export const getContact = () => {
+export const getContacts = () => {
   return {
     type: GET_CONTACTS
   };
