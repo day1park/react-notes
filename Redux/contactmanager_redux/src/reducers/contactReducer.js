@@ -4,8 +4,8 @@ const initialState = {
   contacts: [
     {
       id: 1,
-      name: "John Doe",
-      email: "john@gmail.com",
+      name: "John Dove",
+      email: "john@zmail.com",
       phone: "555-555-5555"
     },
     {
@@ -25,6 +25,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
+    // action types
     case GET_CONTACTS:
       return {
         ...state
